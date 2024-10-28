@@ -655,7 +655,7 @@
 			);
 			currentVersion = 99F1A0EC2CCD468100F6036B /* Score.xcdatamodel */;
 			name = Score.xcdatamodeld;
-			path = /Users/lucifer/Documents/SwiftProjects/App979/App979/Model/Score.xcdatamodeld;
+			path = Score.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
