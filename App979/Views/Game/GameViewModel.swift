@@ -48,11 +48,13 @@ final class GameViewModel: ObservableObject {
     }
     
     func strokeTimer() {
-        if remainingTime > 1 {
+        if remainingTime >= 1 {
             remainingTime -= 1
         } else {
-            prepareWordsForNextRound()
-            action()
+            if !dc.lastWordForEveryone {
+                prepareWordsForNextRound()
+                action()
+            }
         }
     }
     
@@ -103,7 +105,12 @@ final class GameViewModel: ObservableObject {
         }
         dc.answeredWords.append((currentWord, true))
         if words.count >= 1 {
-            toNextCard()
+            if dc.lastWordForEveryone && remainingTime == 0 {
+                prepareWordsForNextRound()
+                action()
+            } else {
+                toNextCard()
+            }
         } else {
             if nextWord != nil {
                 currentWord = nextWord!
@@ -124,7 +131,12 @@ final class GameViewModel: ObservableObject {
         }
         dc.answeredWords.append((currentWord, false))
         if words.count >= 1 {
-            toNextCard()
+            if dc.lastWordForEveryone && remainingTime == 0 {
+                prepareWordsForNextRound()
+                action()
+            } else {
+                toNextCard()
+            }
         } else {
             if nextWord != nil {
                 currentWord = nextWord!

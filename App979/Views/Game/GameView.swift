@@ -130,6 +130,10 @@ struct GameView: View {
     }
     
     func rightAnswer() {
+        if viewModel.dc.lastWordForEveryone && viewModel.remainingTime == 0 {
+            viewModel.rightAnswer()
+            return
+        }
         viewModel.buttonsDisabled = true
         withAnimation(.linear(duration: 0.2)) {
             rotationValue = 30
@@ -149,6 +153,10 @@ struct GameView: View {
     }
     
     func skip() {
+        if viewModel.dc.lastWordForEveryone && viewModel.remainingTime == 0 {
+            viewModel.skip()
+            return
+        }
         viewModel.buttonsDisabled = true
         withAnimation(.linear(duration: 0.2)) {
             rotationValue = -30
