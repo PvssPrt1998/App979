@@ -65,6 +65,10 @@ struct GameView: View {
     func wordCard(_ word: Word, isSuperword: Bool = false) -> some View {
         ZStack {
             isSuperword ? Color.bgSecond : Color.white
+            Image(imageTitleForCategory(word.categoryTitle))
+                .resizable()
+                .scaledToFit()
+                .padding(24)
             Text(word.word)
                 .font(.largeTitle.bold())
                 .foregroundColor(isSuperword ? .white : .textSecond)
@@ -173,6 +177,23 @@ struct GameView: View {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.21) {
             viewModel.buttonsDisabled = false
+        }
+    }
+    
+    
+    func imageTitleForCategory(_ cat: String) -> String {
+        switch cat {
+        case "Sport" : return "Sport1"
+        case "Cartoons": return "Cartoons1"
+        case "Animals" : return "Animals1"
+        case "Harry Potter" : return "HarryPotter1"
+        case "Gaming" : return "Gaming1"
+        case "Celebrities" : return "Celebrities1"
+        case "Food" : return "Food1"
+        case "Nature" : return "Nature1"
+        case "Transportation" : return "Transportation1"
+        default:
+            return "Sport"
         }
     }
 }
