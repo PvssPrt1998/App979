@@ -13,7 +13,7 @@ final class GameViewModel: ObservableObject {
     
     var buttonsDisabled: Bool = false
     
-    @Published var currentWord = Word(categoryTitle: "Error", word: "Invalid word")
+    @Published var currentWord: Word? //= Word(categoryTitle: "Error", word: "Invalid word")
     @Published var nextWord: Word?
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -27,6 +27,7 @@ final class GameViewModel: ObservableObject {
         remainingTime = dc.roundTime
         self.action = action
         words = dc.gameWords
+        //repeatedWordsCheck()
         if words.isEmpty {
             setupWords()
         } else {
@@ -35,17 +36,45 @@ final class GameViewModel: ObservableObject {
                 nextWord = words.removeFirst()
             }
         }
+        print(words)
     }
     
-    func previewTest() {
-        words.append(Word(categoryTitle: "Category1", word: "Word1"))
-        words.append(Word(categoryTitle: "Category2", word: "Word2"))
-        words.append(Word(categoryTitle: "Category3", word: "Word3"))
-        words.append(Word(categoryTitle: "Category4", word: "Word4"))
-        words.append(Word(categoryTitle: "Category5", word: "Word5"))
-        currentWord = words.removeFirst()
-        nextWord = words.removeFirst()
-    }
+//    func repeatedWordsCheck() {
+//        var set = Set<String>()
+//        dc.words.forEach { words in
+//            words.easy.forEach { str in
+//                if set.contains(str) {
+//                    print(str)
+//                } else {
+//                    set.insert(str)
+//                }
+//            }
+//            words.medium.forEach { str in
+//                if set.contains(str) {
+//                    print(str)
+//                } else {
+//                    set.insert(str)
+//                }
+//            }
+//            words.hard.forEach { str in
+//                if set.contains(str) {
+//                    print(str)
+//                } else {
+//                    set.insert(str)
+//                }
+//            }
+//        }
+//    }
+    
+//    func previewTest() {
+//        words.append(Word(categoryTitle: "Category1", word: "Word1"))
+//        words.append(Word(categoryTitle: "Category2", word: "Word2"))
+//        words.append(Word(categoryTitle: "Category3", word: "Word3"))
+//        words.append(Word(categoryTitle: "Category4", word: "Word4"))
+//        words.append(Word(categoryTitle: "Category5", word: "Word5"))
+//        currentWord = words.removeFirst()
+//        nextWord = words.removeFirst()
+//    }
     
     func strokeTimer() {
         if remainingTime >= 1 {
@@ -103,7 +132,7 @@ final class GameViewModel: ObservableObject {
         } else {
             dc.currentPlayer?.score += 1
         }
-        dc.answeredWords.append((currentWord, true))
+        dc.answeredWords.append((currentWord!, true))
         if words.count >= 1 {
             if dc.lastWordForEveryone && remainingTime == 0 {
                 prepareWordsForNextRound()
@@ -129,7 +158,7 @@ final class GameViewModel: ObservableObject {
         if dc.takeAwayPoints {
             dc.currentPlayer?.score -= 1
         }
-        dc.answeredWords.append((currentWord, false))
+        dc.answeredWords.append((currentWord!, false))
         if words.count >= 1 {
             if dc.lastWordForEveryone && remainingTime == 0 {
                 prepareWordsForNextRound()

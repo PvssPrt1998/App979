@@ -55,7 +55,7 @@ struct GameView: View {
                 if let nextWord = viewModel.nextWord {
                     wordCard(nextWord, isSuperword: viewModel.superwordCounter == viewModel.superwordValue - 1)
                 }
-                wordCard(viewModel.currentWord, isSuperword: viewModel.superwordCounter == viewModel.superwordValue)
+                wordCard(viewModel.currentWord!, isSuperword: viewModel.superwordCounter == viewModel.superwordValue)
                     .rotationEffect(.degrees(rotationValue))
                     .offset(x: offsetX, y: offsetY)
             }
