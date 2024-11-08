@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99C57AC22CDE360A00FC44BA /* NewCagegoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C57AC12CDE360A00FC44BA /* NewCagegoryView.swift */; };
+		99C57AC72CDE391300FC44BA /* CategoryAnimate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C57AC32CDE391300FC44BA /* CategoryAnimate+CoreDataClass.swift */; };
+		99C57AC82CDE391300FC44BA /* CategoryAnimate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C57AC42CDE391300FC44BA /* CategoryAnimate+CoreDataProperties.swift */; };
+		99C57AC92CDE391300FC44BA /* TestWord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C57AC52CDE391300FC44BA /* TestWord+CoreDataClass.swift */; };
+		99C57ACA2CDE391300FC44BA /* TestWord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C57AC62CDE391300FC44BA /* TestWord+CoreDataProperties.swift */; };
 		99F1A04E2CCA174200F6036B /* App979App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F1A04D2CCA174200F6036B /* App979App.swift */; };
 		99F1A0502CCA174200F6036B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F1A04F2CCA174200F6036B /* ContentView.swift */; };
 		99F1A0522CCA174300F6036B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99F1A0512CCA174300F6036B /* Assets.xcassets */; };
@@ -14,7 +19,7 @@
 		99F1A0602CCA17FF00F6036B /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F1A05F2CCA17FF00F6036B /* Splash.swift */; };
 		99F1A0662CCA209100F6036B /* CustomTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F1A0652CCA209000F6036B /* CustomTF.swift */; };
 		99F1A06A2CCA234A00F6036B /* VMFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F1A0692CCA234A00F6036B /* VMFactory.swift */; };
-		99F1A06C2CCA238100F6036B /* DContr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F1A06B2CCA238000F6036B /* DContr.swift */; };
+		99F1A06C2CCA238100F6036B /* DC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F1A06B2CCA238000F6036B /* DC.swift */; };
 		99F1A06F2CCA2B4100F6036B /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F1A06E2CCA2B4100F6036B /* Tab.swift */; };
 		99F1A0722CCA2D4600F6036B /* CompetitionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F1A0712CCA2D4600F6036B /* CompetitionsView.swift */; };
 		99F1A0A12CCA3E2000F6036B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F1A0A02CCA3E2000F6036B /* MainView.swift */; };
@@ -55,6 +60,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		99C57AC12CDE360A00FC44BA /* NewCagegoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCagegoryView.swift; sourceTree = "<group>"; };
+		99C57AC32CDE391300FC44BA /* CategoryAnimate+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryAnimate+CoreDataClass.swift"; sourceTree = "<group>"; };
+		99C57AC42CDE391300FC44BA /* CategoryAnimate+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryAnimate+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		99C57AC52CDE391300FC44BA /* TestWord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestWord+CoreDataClass.swift"; sourceTree = "<group>"; };
+		99C57AC62CDE391300FC44BA /* TestWord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestWord+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		99F1A04A2CCA174200F6036B /* App979.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App979.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F1A04D2CCA174200F6036B /* App979App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App979App.swift; sourceTree = "<group>"; };
 		99F1A04F2CCA174200F6036B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,7 +73,7 @@
 		99F1A05F2CCA17FF00F6036B /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		99F1A0652CCA209000F6036B /* CustomTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTF.swift; sourceTree = "<group>"; };
 		99F1A0692CCA234A00F6036B /* VMFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMFactory.swift; sourceTree = "<group>"; };
-		99F1A06B2CCA238000F6036B /* DContr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DContr.swift; sourceTree = "<group>"; };
+		99F1A06B2CCA238000F6036B /* DC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC.swift; sourceTree = "<group>"; };
 		99F1A06E2CCA2B4100F6036B /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		99F1A0712CCA2D4600F6036B /* CompetitionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionsView.swift; sourceTree = "<group>"; };
 		99F1A0A02CCA3E2000F6036B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -140,7 +150,7 @@
 				99F1A0512CCA174300F6036B /* Assets.xcassets */,
 				99F1A0532CCA174300F6036B /* Preview Content */,
 				99F1A0692CCA234A00F6036B /* VMFactory.swift */,
-				99F1A06B2CCA238000F6036B /* DContr.swift */,
+				99F1A06B2CCA238000F6036B /* DC.swift */,
 				99F1A0B52CCBC4E100F6036B /* Keys.swift */,
 			);
 			path = App979;
@@ -187,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				99F1A0652CCA209000F6036B /* CustomTF.swift */,
+				99C57AC12CDE360A00FC44BA /* NewCagegoryView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -220,6 +231,10 @@
 		99F1A0B02CCBAC0E00F6036B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				99C57AC32CDE391300FC44BA /* CategoryAnimate+CoreDataClass.swift */,
+				99C57AC42CDE391300FC44BA /* CategoryAnimate+CoreDataProperties.swift */,
+				99C57AC52CDE391300FC44BA /* TestWord+CoreDataClass.swift */,
+				99C57AC62CDE391300FC44BA /* TestWord+CoreDataProperties.swift */,
 				99F1A0EE2CCD46FE00F6036B /* Score+CoreDataClass.swift */,
 				99F1A0EF2CCD46FE00F6036B /* Score+CoreDataProperties.swift */,
 				99F1A0B12CCBAC1900F6036B /* Category.swift */,
@@ -399,7 +414,7 @@
 				99F1A0CE2CCBE91D00F6036B /* GameViewModel.swift in Sources */,
 				99F1A0F32CCD472900F6036B /* Stack.swift in Sources */,
 				99F1A0502CCA174200F6036B /* ContentView.swift in Sources */,
-				99F1A06C2CCA238100F6036B /* DContr.swift in Sources */,
+				99F1A06C2CCA238100F6036B /* DC.swift in Sources */,
 				99F1A0DC2CCC21E300F6036B /* WinViewModel.swift in Sources */,
 				99F1A0C72CCBE2F200F6036B /* PlayersViewModel.swift in Sources */,
 				99F1A0E32CCCE30C00F6036B /* SettingView.swift in Sources */,
@@ -407,6 +422,11 @@
 				99F1A0EA2CCCF4C300F6036B /* CommandLeaderboardCard.swift in Sources */,
 				99F1A0C02CCBD3BC00F6036B /* CreateCommandView.swift in Sources */,
 				99F1A0D22CCBF8F100F6036B /* Words.swift in Sources */,
+				99C57AC72CDE391300FC44BA /* CategoryAnimate+CoreDataClass.swift in Sources */,
+				99C57AC82CDE391300FC44BA /* CategoryAnimate+CoreDataProperties.swift in Sources */,
+				99C57AC92CDE391300FC44BA /* TestWord+CoreDataClass.swift in Sources */,
+				99C57ACA2CDE391300FC44BA /* TestWord+CoreDataProperties.swift in Sources */,
+				99C57AC22CDE360A00FC44BA /* NewCagegoryView.swift in Sources */,
 				99F1A0B92CCBCC2A00F6036B /* GameSettingView.swift in Sources */,
 				99F1A0722CCA2D4600F6036B /* CompetitionsView.swift in Sources */,
 				99F1A0602CCA17FF00F6036B /* Splash.swift in Sources */,
@@ -566,18 +586,18 @@
 				DEVELOPMENT_ASSET_PATHS = "\"App979/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "BlazingWord Catch Clue in Time";
+				INFOPLIST_KEY_CFBundleDisplayName = "PlinKing: catch balls of Llinko";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ago.bl4z1ngw0rd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -600,18 +620,18 @@
 				DEVELOPMENT_ASSET_PATHS = "\"App979/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "BlazingWord Catch Clue in Time";
+				INFOPLIST_KEY_CFBundleDisplayName = "PlinKing: catch balls of Llinko";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ago.bl4z1ngw0rd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -654,7 +674,6 @@
 				99F1A0EC2CCD468100F6036B /* Score.xcdatamodel */,
 			);
 			currentVersion = 99F1A0EC2CCD468100F6036B /* Score.xcdatamodel */;
-			name = Score.xcdatamodeld;
 			path = Score.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

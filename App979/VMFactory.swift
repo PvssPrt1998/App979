@@ -3,6 +3,9 @@ import SwiftUI
 
 final class ViewModelFactory {
     
+    var awawawf = false
+    @AppStorage("ponyDetailLine") var myLineWordCheck = ""
+    
     let dContr: DContr = DContr()
     
     static let shared = ViewModelFactory()

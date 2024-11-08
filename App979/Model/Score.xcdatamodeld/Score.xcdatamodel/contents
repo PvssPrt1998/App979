@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23C71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CategoryAnimate" representedClassName=".CategoryAnimate" syncable="YES">
+        <attribute name="animate" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+    </entity>
     <entity name="Score" representedClassName=".Score" syncable="YES">
         <attribute name="title" optional="YES" attributeType="String"/>
         <attribute name="totalScore" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="TestWord" representedClassName=".TestWord" syncable="YES">
+        <attribute name="word" optional="YES" attributeType="String" defaultValueString="name0age1breed2owner3customer4country5"/>
     </entity>
 </model>

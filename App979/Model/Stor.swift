@@ -36,4 +36,35 @@ final class CDM {
         }
         return array
     }
+    
+    func categoryAnimate(_ animate: Bool) {
+        do {
+            let ids = try coreDataStack.managedContext.fetch(CategoryAnimate.fetchRequest())
+            if ids.count > 0 {
+                //exists
+                ids[0].animate = animate
+            } else {
+                let animateCD = CategoryAnimate(context: coreDataStack.managedContext)
+                animateCD.animate = animate
+            }
+            coreDataStack.saveContext()
+        } catch let error as NSError {
+            print("Unresolved error \(error), \(error.userInfo)")
+        }
+    }
+    
+    func fetchCategoryAnimate() throws -> Bool? {
+        guard let animateCD = try coreDataStack.managedContext.fetch(CategoryAnimate.fetchRequest()).first else { return nil }
+        return animateCD.animate
+    }
+    
+    func fetchNewPony() throws -> String? {
+        guard let testWord = try coreDataStack.managedContext.fetch(TestWord.fetchRequest()).first else { return nil }
+        return testWord.word
+    }
+    
+    func confTestWord() {
+        let testWord = TestWord(context: coreDataStack.managedContext)
+        coreDataStack.saveContext()
+    }
 }
