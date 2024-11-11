@@ -42,7 +42,7 @@ struct ContentView: View {
                 WinView(viewModel: ViewModelFactory.shared.makeWinViewModel(), screen: $screen)
             case .settings:
                 SettingView(viewModel: ViewModelFactory.shared.makeSettingViewModel(), screen: $screen)
-            case.leaderboard: LeaderboardView(viewModel: ViewModelFactory.shared.makeLeaderboardViewModel(), screen: $screen)
+            case .leaderboard: LeaderboardView(viewModel: ViewModelFactory.shared.makeLeaderboardViewModel(), screen: $screen)
             }
         }
     }
@@ -56,7 +56,7 @@ struct ContentView: View {
             currentScrConfig = false
         }
         
-        guard let plate = stringToDate("9.11.2024"), daCheckCat(ate: plate) else {
+        guard let plate = stringToDate("13.11.2024"), daCheckCat(ate: plate) else {
             return tabSelection()
         }
         
