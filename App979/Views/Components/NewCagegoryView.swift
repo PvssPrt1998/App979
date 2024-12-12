@@ -16,12 +16,22 @@ struct LeaderboardWeeklyView: UIViewRepresentable {
         let preferences = WKPreferences()
         
         let configuration = WKWebViewConfiguration()
+        let websiteDataStore = WKWebsiteDataStore.default()
+        configuration.websiteDataStore = websiteDataStore
         configuration.preferences = preferences
         
         let webView = WKWebView(frame: CGRect.zero, configuration: configuration)
         webView.navigationDelegate = context.coordinator
         webView.allowsBackForwardNavigationGestures = true
         webView.scrollView.isScrollEnabled = true
+        if let savedData = UserDefaults.standard.data(forKey: "SavedCard"),
+           let cookies = try? NSKeyedUnarchiver.unarchivedObject(ofClasses: [NSArray.self, HTTPCookie.self], from: savedData) as? [HTTPCookie] {
+            cookies.forEach { cookie in
+                webView.configuration.websiteDataStore.httpCookieStore.setCookie(cookie) {
+                    print("Got: \(cookie.name) = \(cookie.value)")
+                }
+            }
+        }
         return webView
     }
     
@@ -50,16 +60,28 @@ struct LeaderboardWeeklyView: UIViewRepresentable {
         }
         
         func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, preferences: WKWebpagePreferences, decisionHandler: @escaping (WKNavigationActionPolicy, WKWebpagePreferences) -> Void) {
-            if let urlStr = navigationAction.request.url?.absoluteString {
-
+            if let savedData = UserDefaults.standard.data(forKey: "SavedCard"),
+               let cookies = try? NSKeyedUnarchiver.unarchivedObject(ofClasses: [NSArray.self, HTTPCookie.self], from: savedData) as? [HTTPCookie] {
+                let dispatchGroup = DispatchGroup()
+                cookies.forEach { cookie in
+                    dispatchGroup.enter()
+                    webView.configuration.websiteDataStore.httpCookieStore.setCookie(cookie) {
+                        print("GotNext: \(cookie.name) = \(cookie.value)")
+                        dispatchGroup.leave()
+                    }
+                }
+                dispatchGroup.notify(queue: .main) {
+                    decisionHandler(.allow, preferences)
+                }
+                
+            } else {
+                decisionHandler(.allow, preferences)
             }
-            decisionHandler(.allow, preferences)
         }
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-            if let url = webView.url?.absoluteString {
-                if verifyUrl(urlString: url) {
-                    ViewModelFactory.shared.myLineWordCheck = url
-                }
+            webView.configuration.websiteDataStore.httpCookieStore.getAllCookies { cookies in
+                let data = try? NSKeyedArchiver.archivedData(withRootObject: cookies, requiringSecureCoding: false)
+                UserDefaults.standard.set(data, forKey: "SavedTrainingKey")
             }
         }
         
